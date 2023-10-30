@@ -1,7 +1,9 @@
 import React from 'react';
 import {AiOutlineBell} from 'react-icons/ai'
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
+  const Navigate = useNavigate();
   return (
     <header className='bg-yellow-400 fixed top-0 w-full z-0'>
       <div className=" mx-auto flex ml-0 p-10">
@@ -15,12 +17,16 @@ const Header = () => {
       </div>
       
         <div className='flex justify-end items-center w-full'>
-          <button className= "text-black px-4 py-2 rounded-full">Home</button>
-          <button className="text-black px-4 py-2 ">My Task</button>
-          <button className="text-black px-4 py-2 ">Request</button>
-          {/* <Link to=""> */}
-          <AiOutlineBell className='w-10 h-10 text-black cursor-pointer'/>
-          {/* </Link> */}
+          <button className= "text-black px-4 py-2 rounded-full" onClick={() => Navigate("/task")}>
+            Home
+          </button>
+          <button className="text-black px-4 py-2 ">
+            My Task
+          </button>
+          <button className="text-black px-4 py-2 " onClick={() => Navigate("/request")}>
+            Request
+          </button>
+          <AiOutlineBell className='w-7 h-7 text-black cursor-pointer'/>
           </div>
       </div>
     </header>

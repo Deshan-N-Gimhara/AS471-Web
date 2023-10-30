@@ -1,21 +1,22 @@
 import React from 'react';
+import Footer from '../components/Footer';
 
 
 const Login = () => {
   return (
-
-    <div className='bg-gradient-to-r from-yellow-800 to-yellow-500'>
+    <div>
+    <div className='bg-gradient-to-b from-yellow-800 to-yellow-500'>
       <div className= 'w-full ml-0 flex justify-center pt-10'> 
         <img
             src='https://seeklogo.com/images/U/university-of-peradeniya-logo-FC0C851815-seeklogo.com.png' 
                 alt="uop Logo"
                 className="w-16 h-16 mr-2 aling-left" 
             />
-        <div className="text-center text-black font-semibold relative pt-2">
+        <div className="text-center text-white font-semibold relative pt-2">
             <i>FOS</i> <br/> R e m i n d e r
         </div> 
       </div>
-      <div className='text-center py-8 text-xl'>
+      <div className='text-center py-8 text-xl text-white'>
         <h1>Welcome to the FOS Examination Reminder logging page.</h1>
       </div>
 
@@ -74,7 +75,9 @@ const Login = () => {
                 </p>
             </div>
         </div>
-                            </div>
+      </div>
+      <Footer />
+    </div>
   )
 }
 
